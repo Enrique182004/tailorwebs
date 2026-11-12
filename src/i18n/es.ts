@@ -167,4 +167,18 @@ export const es: Dictionary = {
   },
   notFound: { title: "Página no encontrada", body: "Esta página no existe o se movió.", back: "Volver al inicio" },
   whatsapp: { label: "Escríbenos por WhatsApp" },
+  v2: {
+    kicker: "Estudio digital · El Paso, TX",
+    scrollCue: "Desliza y míralo construirse",
+    manifesto: "Medimos tu negocio, cortamos lo que sobra y cosemos tecnología que te queda perfecta.",
+    sceneEyebrow: "En vivo",
+    sceneTitle: "Así se construye tu sitio",
+    published: "Publicado",
+    marquee: "Hecho a la medida",
+    servicesHint: "Sigue bajando para ver los 9 servicios",
+    ctaTitle: "¿Listo para tu medida?",
+    ctaBody: "Una llamada gratis, una cotización fija y un sitio que te queda perfecto.",
+    ctaButton: "Empezar mi proyecto",
+    version: "Versión",
+  },
 };

@@ -10,7 +10,8 @@ import { cn } from "@/lib/utils";
 
 const QUICK_PICKS: ServiceId[] = ["websites", "customApps", "ecommerce", "socialSeo", "itAudits"];
 
-export function ProjectPrompt({ className }: { className?: string }) {
+export function ProjectPrompt({ className, tone = "light" }: { className?: string; tone?: "light" | "dark" }) {
+  const dark = tone === "dark";
   const { t } = useLanguage();
   const { sendToContact } = useContactDraft();
   const [text, setText] = useState("");
@@ -64,7 +65,7 @@ export function ProjectPrompt({ className }: { className?: string }) {
         </div>
       </form>
       <div className="mt-4" role="group" aria-label={t.hero.promptChipsLabel}>
-        <p aria-hidden="true" className="mb-2 text-sm text-ink-muted">{t.hero.promptChipsLabel}</p>
+        <p aria-hidden="true" className={cn("mb-2 text-sm", dark ? "text-[#C9BFB2]" : "text-ink-muted")}>{t.hero.promptChipsLabel}</p>
         <div className="flex flex-wrap justify-center gap-2">
           {QUICK_PICKS.map((id) => {
             const Icon = serviceIcons[id];
@@ -77,7 +78,11 @@ export function ProjectPrompt({ className }: { className?: string }) {
                 onClick={() => toggle(id)}
                 className={cn(
                   "inline-flex min-h-11 items-center gap-2 rounded-xl border px-3.5 text-sm font-medium transition-all hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-                  active ? "border-ink bg-ink text-paper" : "border-chalk bg-paper text-ink hover:border-ink/40",
+                  active
+                    ? dark
+                      ? "border-ember bg-ember text-ink"
+                      : "border-ink bg-ink text-paper"
+                    : "border-chalk bg-paper text-ink hover:border-ink/40",
                 )}
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />

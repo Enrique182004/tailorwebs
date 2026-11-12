@@ -167,4 +167,18 @@ export const en: Dictionary = {
   },
   notFound: { title: "Page not found", body: "This page doesn't exist or has moved.", back: "Back to home" },
   whatsapp: { label: "Message us on WhatsApp" },
+  v2: {
+    kicker: "Digital studio · El Paso, TX",
+    scrollCue: "Scroll and watch it get built",
+    manifesto: "We measure your business, cut what you don't need and sew together technology that fits perfectly.",
+    sceneEyebrow: "Live",
+    sceneTitle: "How your site gets built",
+    published: "Published",
+    marquee: "Made to measure",
+    servicesHint: "Keep scrolling to see all 9 services",
+    ctaTitle: "Ready for your fitting?",
+    ctaBody: "A free call, a fixed quote and a site that fits perfectly.",
+    ctaButton: "Start my project",
+    version: "Version",
+  },
 };

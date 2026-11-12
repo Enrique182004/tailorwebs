@@ -171,3 +171,21 @@ hero above; content, i18n, contact delivery, a11y and publishing are unchanged.
 - **Motion:** CSS staggered hero load, in-view reveals, hover lifts, header border on scroll, a soft fade on
   language switch (no remount, so form input survives). All disabled or reduced under
   `prefers-reduced-motion`.
+
+## Version 2 (2026-11-12): scroll-built presentation variant
+
+A second home page at `/v2/` (separate Vite entry, `noindex`, canonical → V1) for presenting two options.
+Same copy, i18n, contact hand-off and sections where possible; a floating "V1 · V2" switcher on both pages.
+Techniques taken from the Awwwards "scrolling" collection, adapted to the tailor story:
+
+- **Dark hero:** masked word-rise headline, blueprint grid, pointer-following ember spotlight, project box.
+- **Manifesto:** words fill from 40% to 100% opacity as you scroll (40% keeps ≥3:1 contrast).
+- **Build scene (pinned, 520vh):** a browser is measured (guides, tape, width counter), cut (dashed
+  blocks + scissors), sewn (fills, seams + needle) and fitted (phone, "Published" tag), then a circular
+  cream reveal grows into the page. Step captions track progress; timeline in `src/v2/scene/timeline.ts`.
+- **Velocity marquee**, **horizontal services track** (wide mouse screens; list otherwise), **stacking
+  "why" cards**, **clip-path CTA band** with a magnetic button.
+- **Lenis** inertial scrolling and a trailing cursor ring for mouse users only; header flips light/dark by
+  the `data-tone` of the section underneath.
+- **Reduced motion:** no pinning, all steps visible with the finished stage, list services, no Lenis or
+  cursor. Accent on dark is `ember #E8734F` (5.74:1).

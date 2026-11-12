@@ -56,7 +56,7 @@ export function RestaurantMock() {
             viewport={inView}
             transition={{ delay: 0.15 * i, duration: 0.45 }}
           >
-            <span>{dish.name} <span className="text-pine-soft">{dish.price}</span></span>
+            <span>{dish.name} <span className="text-white/90">{dish.price}</span></span>
             <span className="rounded-md bg-white px-2 py-0.5 text-xs font-semibold text-pine">{mock.add}</span>
           </motion.li>
         ))}

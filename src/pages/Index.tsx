@@ -8,6 +8,7 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { Showcase } from "@/components/Showcase";
 import { SkipLink } from "@/components/SkipLink";
+import { VersionSwitcher } from "@/components/VersionSwitcher";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { WhySection } from "@/components/WhySection";
 
@@ -28,6 +29,7 @@ const Index = () => (
       <Footer />
     </LanguageFade>
     <WhatsAppButton />
+    <VersionSwitcher current={1} />
   </div>
 );
 

@@ -24,6 +24,7 @@ export default {
         ink: { DEFAULT: "#1F1A17", muted: "#6B5E52" },
         rust: { DEFAULT: "#B5482C", dark: "#943A23" },
         chalk: "#D9CCBA",
+        ember: "#E8734F",
         cobalt: { DEFAULT: "#3346D3", soft: "#DDE1FB" },
         pine: { DEFAULT: "#2F5D50", soft: "#D5E8E0" },
         border: "hsl(var(--border))",

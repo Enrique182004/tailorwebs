@@ -123,4 +123,18 @@ export interface Dictionary {
   footer: { tagline: string; serving: string; rights: string };
   notFound: { title: string; body: string; back: string };
   whatsapp: { label: string };
+  v2: {
+    kicker: string;
+    scrollCue: string;
+    manifesto: string;
+    sceneEyebrow: string;
+    sceneTitle: string;
+    published: string;
+    marquee: string;
+    servicesHint: string;
+    ctaTitle: string;
+    ctaBody: string;
+    ctaButton: string;
+    version: string;
+  };
 }
