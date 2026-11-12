@@ -1,0 +1,58 @@
+import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
+import tailwindTypography from "@tailwindcss/typography";
+
+export default {
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "1.5rem",
+      screens: {
+        "2xl": "1280px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        sans: ["Geist", "ui-sans-serif", "sans-serif"],
+        display: ["Bricolage Grotesque", "Geist", "sans-serif"],
+      },
+      colors: {
+        cream: "#F5EFE6",
+        paper: "#FBF8F3",
+        ink: { DEFAULT: "#1F1A17", muted: "#6B5E52" },
+        rust: { DEFAULT: "#B5482C", dark: "#943A23" },
+        chalk: "#D9CCBA",
+        cobalt: { DEFAULT: "#3346D3", soft: "#DDE1FB" },
+        pine: { DEFAULT: "#2F5D50", soft: "#D5E8E0" },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+        secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+        destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+        muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+        accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+        popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+        card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [tailwindAnimate, tailwindTypography],
+} satisfies Config;
